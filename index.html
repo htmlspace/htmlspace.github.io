@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script data-require="jquery@1.11.3" data-semver="1.11.3" src="jquery-1.11.3.min.js"></script>
     <title>Hello World</title>
 </head>
 <body>
+    <header></header>
     <h1>Hello World</h1>
     <p>I'm hosted with GitHub Pages.</p>
-    <canvas id="example" width="200" height="200" style="border:1px solid #000000;">This text is displayed if your browser does not support HTML5 Canvas.</canvas>
-    <script src="canvas.js"></script>
+    <footer></footer>
+    
+    <!-- code for including header/footer -->
+    <script type="text/javascript">
+      
+      // we're ready, include away
+      $(window).ready(function(){
+        
+        // use easy AJAX jQuery helpers
+        
+        // add header.html into <header>
+        $.get("header.html", function(fileData){
+          $('header').html(fileData); 
+        });
+        
+        // add footer.html into <footer>
+        $.get("footer.html", function(fileData){
+          $('footer').html(fileData); 
+        });
+        
+      });
+      
+    </script>
 </body>
 </html>

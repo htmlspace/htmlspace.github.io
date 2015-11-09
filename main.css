@@ -1,0 +1,9 @@
+#wrapper {width: 100%;}
+
+#main {width: 78%; background-color:aliceblue; float: left;}
+
+header {background-color: aqua}
+
+#sidebar {background-color: antiquewhite; width: 22%; float: right;}
+
+footer {background-color: aqua; clear: both;}
